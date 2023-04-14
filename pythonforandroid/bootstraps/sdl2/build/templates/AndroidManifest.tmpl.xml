@@ -37,8 +37,6 @@
     <uses-permission android:name="com.android.vending.BILLING" />
     {% endif %}
 
-    {{ args.extra_manifest_xml }}
-
 
     <!-- Create a Java class extending SDLActivity and place it in a
          directory under src matching the package, e.g.
@@ -136,6 +134,9 @@
     {% for a in args.add_activity  %}
     <activity android:name="{{ a }}"></activity>
     {% endfor %}
+         
+    {{ args.extra_manifest_xml }}
+         
     </application>
 
 </manifest>
